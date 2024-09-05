@@ -32,8 +32,7 @@ export default function Home() {
       isUrgent: false,
     };
 
-    todos.push(newTodo);
-    setTodos(todos);
+    setTodos(prevState => [...prevState,newTodo]);
   };
 
   const deleteTodo = (id: number) => {
