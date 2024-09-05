@@ -39,15 +39,9 @@ export default function Home() {
     setTodos(todos.filter((todo) => todo.id === id));
   };
 
-  const toggleProperty = useCallback((id: number, property: keyof Pick<Todo, 'isCompleted' | 'isUrgent'>) => {
-    const updatedTodos = todos.map((todo) => {
-      if (todo.id === id) {
-        todo[property] = !todo[property] as boolean;
-      }
-      return todo;
-    });
-    setTodos(updatedTodos);
-  }, [setTodos]);
+
+
+
 
   const displayTodoList = (todoList:Todo[]) => {
     return (
