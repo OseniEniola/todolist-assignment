@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   const deleteTodo = (id: number) => {
-    setTodos(todos.filter((todo) => todo.id === id));
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   };
 
 
