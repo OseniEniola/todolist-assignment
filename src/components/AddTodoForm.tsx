@@ -25,6 +25,7 @@ function AddTodoForm({ addTodo }: AddTodoFormProps) {
                 <label>Title:</label>
                 <input
                     type="text"
+                    value={title}
                     placeholder="Provide a title for the new To Do"
                     onChange={(e) => setTitle(e.target.value)}
                     required
