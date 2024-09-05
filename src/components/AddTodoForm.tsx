@@ -13,7 +13,7 @@ function AddTodoForm({ addTodo }: AddTodoFormProps) {
     const [desc, setDesc] = useState<string>('');
 
     const handleSubmit = (event: React.FormEvent) => {
-        event.preventDefault()
+        event.preventDefault() // added to prevent page reload on submit
         addTodo(title, desc);
         setTitle('');
         setDesc('');
