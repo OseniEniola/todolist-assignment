@@ -15,13 +15,16 @@ interface TodoListProps {
 function TodoList({ todos, deleteTodo, toggleComplete, toggleUrgent }: TodoListProps) {
     return (
         <ul>
-            {todos.map((todo) => (
-                <TodoItem
-                    todo={todo}
-                    deleteTodo={deleteTodo}
-                    toggleComplete={toggleComplete}
-                    toggleUrgent={toggleUrgent}
-                />
+            {todos.map((todo, index) => (
+                <div key={index}>
+                    <TodoItem
+                        todo={todo}
+                        deleteTodo={deleteTodo}
+                        toggleComplete={toggleComplete}
+                        toggleUrgent={toggleUrgent}
+                    />
+                </div>
+
             ))}
         </ul>
     );
